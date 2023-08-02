@@ -9,37 +9,53 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ReloadingDB
 build_property.RootNamespace = ReloadingDB
-build_property.ProjectDir = C:\Users\toddc\OneDrive\Desktop\Repos\1 FINAL PROJECT\New folder\ReloadingDB\
+build_property.ProjectDir = C:\Users\toddc\OneDrive\Desktop\Repos\1 FINAL PROJECT\Final Project Code Files\ReloadingDB\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\toddc\OneDrive\Desktop\Repos\1 FINAL PROJECT\New folder\ReloadingDB
+build_property.MSBuildProjectDirectory = C:\Users\toddc\OneDrive\Desktop\Repos\1 FINAL PROJECT\Final Project Code Files\ReloadingDB
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/New folder/ReloadingDB/Views/Home/Index.cshtml]
+[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/Final Project Code Files/ReloadingDB/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/New folder/ReloadingDB/Views/Home/Privacy.cshtml]
+[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/Final Project Code Files/ReloadingDB/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/New folder/ReloadingDB/Views/Shared/Error.cshtml]
+[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/Final Project Code Files/ReloadingDB/Views/Recipes/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/Final Project Code Files/ReloadingDB/Views/Recipes/InsertRecipes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlc1xJbnNlcnRSZWNpcGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/Final Project Code Files/ReloadingDB/Views/Recipes/UpdateRecipes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlc1xVcGRhdGVSZWNpcGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/Final Project Code Files/ReloadingDB/Views/Recipes/ViewRecipes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVjaXBlc1xWaWV3UmVjaXBlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/Final Project Code Files/ReloadingDB/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/New folder/ReloadingDB/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/Final Project Code Files/ReloadingDB/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/New folder/ReloadingDB/Views/_ViewImports.cshtml]
+[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/Final Project Code Files/ReloadingDB/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/New folder/ReloadingDB/Views/_ViewStart.cshtml]
+[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/Final Project Code Files/ReloadingDB/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/New folder/ReloadingDB/Views/Shared/_Layout.cshtml]
+[C:/Users/toddc/OneDrive/Desktop/Repos/1 FINAL PROJECT/Final Project Code Files/ReloadingDB/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-n98klcs2er

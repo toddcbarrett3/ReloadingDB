@@ -1,0 +1,41 @@
+﻿@model Recipes
+
+<h3>@Model.Mfg @Model.Caliber @Model.BulletType @Model.BulletWeight grain with @Model.Powder Powder</h3>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Mfg</th>
+        <th>Caliber</th>
+        <th>Bullet Type</th>
+        <th>Weight (gr)</th>
+        <th>Powder</th>
+        <th>MIN Charge (gr)</th>
+        <th>MAX Charge (gr)</th>
+        <th>Velocity at MAX Charge (fps)</th>
+    </tr>
+    <tr>
+        <td>@Model.ID</td>
+        <td>@Model.Mfg</td>
+        <td>@Model.Caliber</td>
+        <td>@Model.BulletType</td>
+        <td>@Model.BulletWeight</td>
+        <td>@Model.Powder</td>
+        <td>@Model.MinCharge</td>
+        <td>@Model.MaxCharge</td>
+        <td>@Model.VelocityAtMax</td>
+    </tr>
+</table>
+
+<div style="display: block">
+    <a href="/Recipes/UpdateRecipes/@Model.ID">Update this Entry</a>
+</div>
+
+<div style="display: block">
+
+    @using (Html.BeginForm("DeleteRecipes", "Recipes", "Post"))
+    {
+        <input type="hidden" asp-for="ID" value="@Model.ID" />
+        <input type="submit" onclick="return confirm('Are you sure?')" value="Delete this Entry" />
+    }
+</div>

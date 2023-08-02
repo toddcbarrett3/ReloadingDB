@@ -1,0 +1,34 @@
+﻿@model Recipes
+
+<h2>Update @Model.Mfg @Model.Caliber @Model.BulletType @Model.BulletWeight grain with @Model.Powder Powder</h2>
+
+@using (Html.BeginForm("UpdateRecipesToDatabase", "Recipes", "Post"))
+{
+    <input asp-for="ID" type="hidden" value="@Model.ID" />
+
+    <label asp-for="Mfg" class="control-label">Mfg</label>
+    <input type="text" name="Mfg" class="form-control" value="@Model.Mfg" />
+
+    <label asp-for="Caliber" class="control-label">Caliber</label>
+    <input type="text" name="Caliber" class="form-control" value="@Model.Caliber" />
+
+    <label asp-for="BulletType" class="control-label">Bullet Type</label>
+    <input type="text" name="BulletType" class="form-control" value="@Model.BulletType" />
+
+    <label asp-for="BulletWeight" class="control-label">Weight (gr)</label>
+    <input type="number" step="1" name="BulletWeight" class="form-control" value="@Model.BulletWeight" />
+
+    <label asp-for="Powder" class="control-label">Powder</label>
+    <input type="text" name="Powder" class="form-control" value="@Model.Powder" />
+
+    <label asp-for="MinCharge" class="control-label">MIN Charge (gr)</label>
+    <input type="number" step="0.1" name="MinCharge" class="form-control" value="@Model.MinCharge" />
+
+    <label asp-for="MaxCharge" class="control-label">MAX Charge (gr)</label>
+    <input type="number" step="0.1" name="MaxCharge" class="form-control" value="@Model.MaxCharge" />
+
+    <label asp-for="VelocityAtMax" class="control-label">Velocity at MAX Charge (fps)</label>
+    <input type="number" step="1" name="VelocityAtMax" class="form-control" value="@Model.VelocityAtMax" />
+
+    <input type="submit" value="Update Entry" class="btn btn-primary" />
+}

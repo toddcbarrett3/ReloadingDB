@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\toddc\\OneDrive\\Desktop\\Repos\\1 FINAL PROJECT\\New folder\\ReloadingDB\\ReloadingDB.csproj": {}
+    "C:\\Users\\toddc\\OneDrive\\Desktop\\Repos\\1 FINAL PROJECT\\Final Project Code Files\\ReloadingDB\\ReloadingDB.csproj": {}
   },
   "projects": {
-    "C:\\Users\\toddc\\OneDrive\\Desktop\\Repos\\1 FINAL PROJECT\\New folder\\ReloadingDB\\ReloadingDB.csproj": {
+    "C:\\Users\\toddc\\OneDrive\\Desktop\\Repos\\1 FINAL PROJECT\\Final Project Code Files\\ReloadingDB\\ReloadingDB.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\toddc\\OneDrive\\Desktop\\Repos\\1 FINAL PROJECT\\New folder\\ReloadingDB\\ReloadingDB.csproj",
+        "projectUniqueName": "C:\\Users\\toddc\\OneDrive\\Desktop\\Repos\\1 FINAL PROJECT\\Final Project Code Files\\ReloadingDB\\ReloadingDB.csproj",
         "projectName": "ReloadingDB",
-        "projectPath": "C:\\Users\\toddc\\OneDrive\\Desktop\\Repos\\1 FINAL PROJECT\\New folder\\ReloadingDB\\ReloadingDB.csproj",
+        "projectPath": "C:\\Users\\toddc\\OneDrive\\Desktop\\Repos\\1 FINAL PROJECT\\Final Project Code Files\\ReloadingDB\\ReloadingDB.csproj",
         "packagesPath": "C:\\Users\\toddc\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\toddc\\OneDrive\\Desktop\\Repos\\1 FINAL PROJECT\\New folder\\ReloadingDB\\obj\\",
+        "outputPath": "C:\\Users\\toddc\\OneDrive\\Desktop\\Repos\\1 FINAL PROJECT\\Final Project Code Files\\ReloadingDB\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\toddc\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,16 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
+          "dependencies": {
+            "Dapper": {
+              "target": "Package",
+              "version": "[2.0.143, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
