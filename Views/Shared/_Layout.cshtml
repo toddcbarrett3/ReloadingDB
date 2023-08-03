@@ -23,7 +23,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Recipes" asp-action="Index">Recipes</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Recipes" asp-action="AllMyLoads">My Custom Cartidge Loads</a>
                         </li>
                     </ul>
                 </div>
@@ -33,6 +33,15 @@
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
+            <h1>Available Cartridge Calibers</h1>
+            <ul class="navbar-nav flex-grow-1">
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Recipes" asp-action="All7mmRemMagRecipes">7mm Remington Magnum</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-controller="Recipes" asp-action="All308WinRecipes">308 Winchester</a>
+                </li>
+            </ul>
         </main>
     </div>
 

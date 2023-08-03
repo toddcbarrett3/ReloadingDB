@@ -15,6 +15,18 @@ namespace ReloadingDB.Models
         {
             return _conn.Query<Recipes>("SELECT * FROM RECIPES;");
         }
+        public IEnumerable<Recipes> Get7mmRemMagRecipes()
+        {
+            return _conn.Query<Recipes>("SELECT * FROM RECIPES WHERE Caliber = '7mm Rem Mag';");
+        }
+        public IEnumerable<Recipes> Get308WinRecipes()
+        {
+            return _conn.Query<Recipes>("SELECT * FROM RECIPES WHERE Caliber = '308 Winchester';");
+        }
+        public IEnumerable<Recipes> GetMyLoads()
+        {
+            return _conn.Query<Recipes>("SELECT * FROM RECIPES WHERE MyLoad = True;");
+        }
         public Recipes GetRecipes(int id)
         {
             return _conn.QuerySingle<Recipes>("SELECT * FROM RECIPES WHERE ID = @id", new { id = id });

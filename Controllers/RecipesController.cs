@@ -16,6 +16,21 @@ namespace ReloadingDB.Controllers
             var recipes = repo.GetAllRecipes();
             return View(recipes);
         }
+        public IActionResult All7mmRemMagRecipes()
+        {
+            var recipes = repo.Get7mmRemMagRecipes();
+            return View(recipes);
+        }
+        public IActionResult All308WinRecipes()
+        {
+            var recipes = repo.Get308WinRecipes();
+            return View(recipes);
+        }
+        public IActionResult AllMyLoads()
+        {
+            var recipes = repo.GetMyLoads();
+            return View(recipes);
+        }
         public IActionResult ViewRecipes(int id)
         {
             var recipes = repo.GetRecipes(id);

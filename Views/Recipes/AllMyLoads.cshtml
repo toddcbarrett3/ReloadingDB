@@ -1,0 +1,37 @@
+﻿@model IEnumerable<Recipes>
+
+<h2>All Cartridge Recipes</h2>
+
+<div style="display: block">
+    <a href="/Recipes/InsertRecipes/">Create a New Recipe</a>
+</div>
+
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>Mfg</th>
+        <th>Caliber</th>
+        <th>Bullet Type</th>
+        <th>Weight (gr)</th>
+        <th>Powder</th>
+        <th>MIN Charge (gr)</th>
+        <th>MAX Charge (gr)</th>
+        <th>Velocity at MAX Charge (fps)</th>
+    </tr>
+
+    @foreach (var recipes in @Model)
+    {
+        <tr>
+            <td><a href=/Recipes/ViewRecipes/@recipes.ID>@recipes.ID</a></td>
+            <td>@recipes.Mfg</td>
+            <td>@recipes.Caliber</td>
+            <td>@recipes.BulletType</td>
+            <td>@recipes.BulletWeight</td>
+            <td>@recipes.Powder</td>
+            <td>@recipes.MinCharge</td>
+            <td>@recipes.MaxCharge</td>
+            <td>@recipes.VelocityAtMax</td>
+        </tr>
+    }
+
+</table>
