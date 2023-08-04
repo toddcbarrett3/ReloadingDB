@@ -1,12 +1,21 @@
 ﻿@model IEnumerable<Recipes>
 
-<h2>All Cartridge Recipes</h2>
+<h2>All 308 Winchester Cartridge Recipes</h2>
 
 <div style="display: block">
-    <a href="/Recipes/InsertRecipes/">Create a New Recipe</a>
+    <a href="/Recipes/InsertRecipes/">Create a New Recipe</a>    
 </div>
 
-<table class="table">
+<h3><br />Filter Results:</h3>
+
+<div class ="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+    <input type="text" id="mfgInput" onkeyup="myFunction()" placeholder="Search by Mfg..">
+    <input type="text" id="bulletTypeInput" onkeyup="myFunction()" placeholder="Search by Bullet Type..">
+    <input type="text" id="weightInput" onkeyup="myFunction()" placeholder="Search by Bullet Weight..">
+    <input type="text" id="powderInput" onkeyup="myFunction()" placeholder="Search by Powder..">    
+</div>
+
+<table id="myTable" class="table">
     <tr>
         <th>ID</th>
         <th>Mfg</th>
@@ -35,3 +44,43 @@
     }
 
 </table>
+
+<script>
+    function myFunction() {
+        // Declare variables
+        var table, i, tr, tdMfg, tdBulletType, tdWeight, tdPowder, mfgInput, mfgFilter, mfgTxtValue, bulletTypeInput, bulletTypeFilter, bulletTypeTxtValue, weightInput, weightFilter, weightTxtValue, powderInput, powderFilter, powderTxtValue;
+        mfgInput = document.getElementById("mfgInput");
+        mfgFilter = mfgInput.value.toUpperCase();
+        bulletTypeInput = document.getElementById("bulletTypeInput");
+        bulletTypeFilter = bulletTypeInput.value.toUpperCase();
+        weightInput = document.getElementById("weightInput");
+        weightFilter = weightInput.value.toUpperCase();
+        powderInput = document.getElementById("powderInput");
+        powderFilter = powderInput.value.toUpperCase();
+        table = document.getElementById("myTable");
+        tr = table.getElementsByTagName("tr");
+
+        // Loop through all table rows, and hide those who don't match the search query
+        for (i = 0; i < tr.length; i++) {
+            tdMfg = tr[i].getElementsByTagName("td")[1];
+            tdBulletType = tr[i].getElementsByTagName("td")[3];
+            tdWeight = tr[i].getElementsByTagName("td")[4];
+            tdPowder = tr[i].getElementsByTagName("td")[5];
+            
+            if (tdMfg && tdBulletType && tdWeight && tdPowder) {
+                mfgTxtValue = tdMfg.textContent || tdMfg.innerText;
+                bulletTypeTxtValue = tdBulletType.textContent || tdBulletType.innerText;
+                weightTxtValue = tdWeight.textContent || tdWeight.innerText;
+                powderTxtValue = tdPowder.textContent || tdPowder.innerText;
+                if (mfgTxtValue.toUpperCase().indexOf(mfgFilter) > -1 &&
+                bulletTypeTxtValue.toUpperCase().indexOf(bulletTypeFilter) > -1 &&
+                weightTxtValue.toUpperCase().indexOf(weightFilter) > -1 &&
+                powderTxtValue.toUpperCase().indexOf(powderFilter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }            
+        }
+    }
+</script>
