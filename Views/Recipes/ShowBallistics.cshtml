@@ -1,0 +1,31 @@
+﻿<head>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', { packages: ['table'] });
+        google.charts.setOnLoadCallback(drawTable);
+
+        function drawTable() {
+            var query = new google.visualization.Query(
+                'https://docs.google.com/spreadsheets/d/1cexN4tKkWKfDum5mdqF-UiqlGH3LSPzboLJum5lJhkg/edit?range=D2:Q24');
+
+            query.send(handleQueryResponse);
+        }
+
+        function handleQueryResponse(response) {            
+            var data = response.getDataTable();
+            var table = new google.visualization.Table(document.getElementById('table_div'));
+            table.draw(data, { showRowNumber: false, width: '100%', height: '100%' });
+        }    
+    </script>
+</head>
+<body>
+@model Recipes
+
+@*<h3>Custom Ballistics Data for @Model.City</h3>*@
+
+@*<h3>@Model.Mfg @Model.Caliber @Model.BulletType @Model.BulletWeight grain with @Model.Powder Powder</h3>*@
+
+    <div id="table_div"></div>
+
+
+</body>

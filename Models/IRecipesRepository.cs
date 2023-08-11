@@ -10,5 +10,6 @@
         public void UpdateRecipes(Recipes recipes);
         public void InsertRecipes(Recipes recipesToInsert);
         public void DeleteRecipes(Recipes recipes);        
+        public Recipes RunBallistics(Recipes recipes);        
     }
 }

@@ -1,5 +1,9 @@
 ﻿using Dapper;
 using System.Data;
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Services;
+using Google.Apis.Sheets.v4;
+using GoogleSheetsHelper;
 
 namespace ReloadingDB.Models
 {
@@ -45,5 +49,16 @@ namespace ReloadingDB.Models
         {
             _conn.Execute("DELETE FROM recipes WHERE ID = @id;", new { id = recipes.ID });
         }
+        
+        
+        public Recipes RunBallistics(Recipes recipes)
+        {
+            _conn.QuerySingle<Recipes>("SELECT * FROM RECIPES WHERE ID = @id", new { id = recipes.ID });
+
+            GoogleSheetsUpdate.Init();
+            GoogleSheetsUpdate.UpdateCells();
+
+            return recipes;
+        }        
     }
 }

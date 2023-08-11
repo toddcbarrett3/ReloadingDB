@@ -66,5 +66,20 @@ namespace ReloadingDB.Controllers
             repo.DeleteRecipes(recipes);
             return RedirectToAction("Index");
         }
+        public IActionResult RunBallistics(int id)
+        {
+            Recipes recip = repo.GetRecipes(id);
+            if (recip == null)
+            {
+                return View("RecipeNotFound");
+            }
+            return View(recip);
+        }        
+        public IActionResult ShowBallistics(Recipes recipes)
+        {
+            repo.RunBallistics(recipes);
+            
+            return View("ShowBallistics", recipes);
+        }
     }
 }

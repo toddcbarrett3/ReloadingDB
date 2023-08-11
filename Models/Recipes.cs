@@ -2,7 +2,7 @@
 {
     public class Recipes
     {
-        public Recipes() 
+        public Recipes()
         {
         }
 
@@ -22,5 +22,12 @@
         public string? MinCharge { get; set; }
         public string? MaxCharge { get; set; }
         public int VelocityAtMax { get; set; }
+
+        //Ballistics Properties
+        public int Altitude { get; set; }
+        public int Temperature { get; set; }
+        public double ScopeHeight { get; set; } = 1.50;
+        public int ZeroRange { get; set; } = 200;
+        
     }
 }

@@ -1,0 +1,23 @@
+﻿@model Recipes
+
+@*<h2>Update @Model.Mfg @Model.Caliber @Model.BulletType @Model.BulletWeight grain with @Model.Powder Powder</h2>*@
+<h2>Generate Site Specific Ballistics Data</h2>
+
+@using (Html.BeginForm("ShowBallistics", "Recipes", "Post"))
+{
+    <input asp-for="ID" type="hidden" value="@Model.ID" />
+
+    <label asp-for="Altitude" class="control-label">Altitude</label>
+    <input type="number" name="Altitude" class="form-control" value="@Model.Altitude" />
+
+    <label asp-for="Temperature" class="control-label">Temperature</label>
+    <input type="number" name="Temperature" class="form-control" value="@Model.Temperature" />
+
+    <label asp-for="ZeroRange" class="control-label">Zero Range (yds)</label>
+    <input type="number" step="1" name="ZeroRange" class="form-control" value="@Model.ZeroRange" />
+
+    <label asp-for="ScopeHeight" class="control-label">Scope Height</label>
+    <input type="number" step="0.01" name="ScopeHeight" class="form-control" value="@Model.ScopeHeight" />
+
+    <input type="submit" value="Run Ballistics" class="btn btn-primary" />
+}

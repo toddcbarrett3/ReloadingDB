@@ -10,6 +10,8 @@
 *.userosscache
 *.sln.docstates
 appsettings.json
+credentials.json
+myspreadsheetconnector-53e49f7313e6.json
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
