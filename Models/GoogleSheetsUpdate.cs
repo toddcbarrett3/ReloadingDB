@@ -10,9 +10,9 @@ namespace ReloadingDB.Models
         static readonly string[] Scopes = { SheetsService.Scope.Spreadsheets };
         static readonly string ApplicationName = "GoogleSheetsUpdate";
         static readonly string SpreadsheetId = "1cexN4tKkWKfDum5mdqF-UiqlGH3LSPzboLJum5lJhkg";
-        static SheetsService service;
+        static SheetsService service;        
 
-        public static void Init()
+        public void Init()
         {
             GoogleCredential credential;
 
@@ -29,17 +29,15 @@ namespace ReloadingDB.Models
                 ApplicationName = ApplicationName
             });
         }
-
-        public static void UpdateCells()
+        
+        public void UpdateCells(List<IList<object>> updateList)
         {
             var range = "Ballistics!B12";
 
             var valueRange = new ValueRange();
 
             // Setting Cell Value...
-            var oblist = new List<object>() { 3000 };
-
-            valueRange.Values = new List<IList<object>> { oblist };
+            valueRange.Values = updateList;
 
             // Performing Update Operation...
             var updateRequest = service.Spreadsheets.Values.Update(valueRange, SpreadsheetId, range);

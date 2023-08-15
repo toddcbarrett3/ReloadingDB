@@ -9,7 +9,6 @@
         public Recipes GetRecipes(int id);
         public void UpdateRecipes(Recipes recipes);
         public void InsertRecipes(Recipes recipesToInsert);
-        public void DeleteRecipes(Recipes recipes);        
-        public Recipes RunBallistics(Recipes recipes);        
+        public void DeleteRecipes(Recipes recipes);                    
     }
 }

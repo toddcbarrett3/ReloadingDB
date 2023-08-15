@@ -4,6 +4,7 @@ using Google.Apis.Auth.OAuth2;
 using Google.Apis.Services;
 using Google.Apis.Sheets.v4;
 using GoogleSheetsHelper;
+using Google.Apis.Sheets.v4.Data;
 
 namespace ReloadingDB.Models
 {
@@ -48,17 +49,6 @@ namespace ReloadingDB.Models
         public void DeleteRecipes(Recipes recipes)
         {
             _conn.Execute("DELETE FROM recipes WHERE ID = @id;", new { id = recipes.ID });
-        }
-        
-        
-        public Recipes RunBallistics(Recipes recipes)
-        {
-            _conn.QuerySingle<Recipes>("SELECT * FROM RECIPES WHERE ID = @id", new { id = recipes.ID });
-
-            GoogleSheetsUpdate.Init();
-            GoogleSheetsUpdate.UpdateCells();
-
-            return recipes;
-        }        
+        }               
     }
 }

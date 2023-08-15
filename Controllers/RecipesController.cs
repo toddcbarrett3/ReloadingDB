@@ -73,11 +73,13 @@ namespace ReloadingDB.Controllers
             {
                 return View("RecipeNotFound");
             }
+            
             return View(recip);
         }        
         public IActionResult ShowBallistics(Recipes recipes)
         {
-            repo.RunBallistics(recipes);
+            Recipes instance = new Recipes();
+            instance.RunBallistics(recipes);
             
             return View("ShowBallistics", recipes);
         }
